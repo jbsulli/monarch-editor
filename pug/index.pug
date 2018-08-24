@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(http-equiv="Content-Type" content="text/html;charset=utf-8")
+    link(rel="stylesheet" href="/css/styles.css")
+    //- style(type="text/css")
+      include ../www/css/styles.css
+  body
+    #editors
+      .row
+        .col
+          .monaco-wrap
+            #editor
+          #console Loading...
+        .spacer-v
+        .col
+          .monaco-wrap
+            #languagePreview
+
+    script(src="vendor/monaco/vs/loader.js")
+    script(src="/js/monarch-editor.js")
+    //- script
+      include ../js/monarch-editor.js

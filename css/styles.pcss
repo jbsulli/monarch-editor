@@ -1,0 +1,79 @@
+$console-height: 30px;
+$background-color: #1e1e1e;
+$border-color: #282828;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  background: $background-color;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#editors {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+#editors > .row {
+  flex: 1 1;
+  min-height: 0;
+  display: flex;
+}
+
+#editors > .row > .col {
+  flex: 1 1;
+  min-width: 0;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#editors > .row > .spacer-v {
+  flex: 0 0 1px;
+  background: $border-color;
+}
+
+#editors > .row > .col > * {
+  flex: 1 1;
+  min-height: 0;
+}
+
+#editors .monaco-wrap {
+  position: relative;
+}
+
+#editors .monaco-wrap > * {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+#previewLanguage {
+  bottom: -($console-height);
+}
+
+#editors #console {
+  flex: 0 0 $console-height;
+  font-family: monospace;
+  border-top: 1px solid $border-color;
+  background: $background-color;
+  color: #d4d4d4;
+  font-family: Consolas, "Courier New", monospace;
+  line-height: 29px;
+  font-size: 14px;
+  font-weight: 400;
+  font-feature-settings: "liga" off, "calt" off; 
+  padding: 0 8px;
+  height: $console-height;
+}
